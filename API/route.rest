@@ -1,0 +1,71 @@
+GET http://localhost:8080/partidas/victorias
+###
+
+POST http://localhost:8080/partidas/
+Content-Type: application/json
+
+{
+        "jugador1": "Carla",
+        "jugador2": "Tania",
+        "fecha": "10/1/2019",
+        "hora": "15:55"
+}
+
+###
+
+PATCH http://localhost:8080/partidas/60d7960c45ed5c2120d5b8cd
+Content-Type: application/json
+
+{
+    "ganador": "empate",
+    "duracion": "1.5 minutos",
+    "movimientosRealizados": 10
+}
+
+###
+
+POST http://localhost:8080/reportes/filtrar
+Content-Type: application/json
+
+{
+    "tipo": "seguridad",
+    "identificador": "Reporte #0"
+}
+
+###
+
+POST http://localhost:8080/reporte/
+Content-Type: application/json
+
+{
+    "tipo": "limpieza",
+    "fecha": "03/20/2021",
+    "hora": "14:00:00",
+    "multimedia":[],
+    "descripcion": "Descripcion 15",
+    "ubicacion": [],
+    "creadoPor": "60ab5912f567f237e040736e"
+}
+
+###
+
+PATCH http://localhost:8080/reportes/60ab5e6bf486770efc5cb786
+Content-Type: application/json
+
+{
+    "estado": "En revisión"
+}
+
+###
+
+DELETE http://localhost:8080/partidas/60ae00c8a758460b7cf07d32
+
+###
+
+PATCH http://localhost:8080/categorias/607e24250461c02dd8717a87
+Content-Type: application/json
+
+{
+    "nombre":"pantalones"
+}
+
